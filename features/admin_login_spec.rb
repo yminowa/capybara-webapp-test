@@ -11,7 +11,7 @@ feature '管理者TOPページログイン', js: true do
   scenario '正しいユーザ名とパスワードの組み合わせでログインできる' do
     visit '/admin'
     fill_in 'UserID', with: 'admin'
-    fill_in 'Password', with: 'F8oLrv6t'
+    fill_in 'Password', with: 'correct_password'
 
     click_on('ログイン')
 
@@ -22,7 +22,7 @@ feature '管理者TOPページログイン', js: true do
   scenario '正しくないユーザ名とパスワードの組み合わせでログインできない' do
     visit '/admin'
     fill_in 'UserID', with: 'admin'
-    fill_in 'Password', with: 'admin'
+    fill_in 'Password', with: 'invalid_password'
 
     click_on('ログイン')
 
